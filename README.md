@@ -40,7 +40,12 @@ The ticket system offers a very neat and modern interface. In addition, it's sup
 
 ## Installation
 <ol>
-<li>Eintrag 1</li>
-<li>Eintrag 2</li>
-<li>Eintrag 3</li>
+<li>Download the repository and unpack it in the Addons folder.</li>
+<li>Edit the sh_config.lua to your needs.</li>
+<li>Restart the server.</li>
 </ol>
+
+## Installation
+As already mentioned, the addon uses CAMI permissions. That means you can adjust the permissions ingame with many admin mods.
+In this example with SAM:
+<img src="https://i.imgur.com/qEjK5Oz.png" alt="SAM">
