@@ -30,13 +30,13 @@
 The ticket system offers a very neat and modern interface. In addition, it's super fast and has a very good performance. It is designed to be very easy to create and claim tickets without having to click through thousands of menus.
 
 ## Keyfeatures
-✔️ Modern UI
-✔️ Fast
-✔️ Easy and fast to use
-✔️ Create, claim, reopen & close tickets
-✔️ Overview of team members who are online
-✔️ CAMI permissions
-✔️ Big config file
-✔️ Automatic reminder when tickets are open
+✔️ Modern UI<br />
+✔️ Fast<br />
+✔️ Easy and fast to use<br />
+✔️ Create, claim, reopen & close tickets<br />
+✔️ Overview of team members who are online<br />
+✔️ CAMI permissions<br />
+✔️ Big config file<br />
+✔️ Automatic reminder when tickets are open<br />
 
 ## Installation
