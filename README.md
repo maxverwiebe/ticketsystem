@@ -26,7 +26,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <img src="https://i.imgur.com/BfjdLda.png" alt="Logo">
-<br />
 The ticket system offers a very neat and modern interface. In addition, it's super fast and has a very good performance. It is designed to be very easy to create and claim tickets without having to click through thousands of menus.
 
 ## Keyfeatures
@@ -40,3 +39,8 @@ The ticket system offers a very neat and modern interface. In addition, it's sup
 ✔️ Automatic reminder when tickets are open<br />
 
 ## Installation
+<ol>
+<li>Eintrag 1</li>
+<li>Eintrag 2</li>
+<li>Eintrag 3</li>
+</ol>
