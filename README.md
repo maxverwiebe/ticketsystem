@@ -10,17 +10,22 @@ The ticket system offers a very neat and modern interface. In addition, it's sup
 ✔️ CAMI permissions<br />
 ✔️ Big config file<br />
 ✔️ Automatic reminder when tickets are open<br />
+<br/>
+<img src="https://i.imgur.com/Aq6jxeN.jpeg" alt="Preview">
+
 
 ## Installation
 <ol>
 <li>Download the repository and unpack it in the Addons folder.</li>
 <li>Edit the sh_config.lua to your needs.</li>
 <li>Restart the server.</li>
+<li>Configure the permissions.</li>
 </ol>
 
 ## Permissions
 As already mentioned, the addon uses CAMI permissions. That means you can adjust the permissions ingame with many admin mods.
 In this example with SAM:
+
 <img src="https://i.imgur.com/qEjK5Oz.png" alt="SAM">
 
 <ul>
