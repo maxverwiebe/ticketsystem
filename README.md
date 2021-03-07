@@ -25,11 +25,8 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<img src="https://i.imgur.com/BfjdLda.png" alt="Logo">
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://i.imgur.com/BfjdLda.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">YOUR_TITLE</h3>
 
   <p align="center">
