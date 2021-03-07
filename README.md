@@ -36,6 +36,16 @@ There are two commands that can be used to control the addon.
 <li>/tickets or /ticketoverview - Opens the ticket overview menu</li>
 </ul>
 
-
+## Config file
+The config file is located at ticketsystem/lua/ticketsystem/sh_config.lua. All things can be configured there.
+<ul>
+<li>Color-Theme</li>
+<li>Usergroup display (color & name)</li>
+<li>Ticket limit</li>
+<li>Reminder cooldown</li>
+<li>Commands</li>
+<li>Labels</li>
+<li>Localization</li>
+</ul>
 
  
