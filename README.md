@@ -45,7 +45,15 @@ The ticket system offers a very neat and modern interface. In addition, it's sup
 <li>Restart the server.</li>
 </ol>
 
-## Installation
+## Permissions
 As already mentioned, the addon uses CAMI permissions. That means you can adjust the permissions ingame with many admin mods.
 In this example with SAM:
 <img src="https://i.imgur.com/qEjK5Oz.png" alt="SAM">
+
+<ul>
+<li>`TicketSystem.CanOpenAdminMenu` - The player can open the admin menu</li>
+<li>`TicketSystem.CanCreateTicket` - The player can create a ticket</li>
+<li>`TicketSystem.ManageTickets` - The player claim/close/reopen tickets</li>
+</ul>
+
+## 
