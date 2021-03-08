@@ -140,6 +140,10 @@ TicketSystem.Config.Language = {
     ["OPTIONS_CLAIM"] = "Claim ticket",
     ["OPTIONS_CLOSE"] = "Close ticket",
     ["OPTIONS_REOPEN"] = "Reopen ticket",
+    ["OPTIONS_GOTO"] = "Teleport to player",
+    ["OPTIONS_BRING"] = "Bring player",
+    ["OPTIONS_RETURN"] = "Return player",
+
 
     ["OVERVIEW_NOTICKETS"] = "There are currently no tickets :)",
     ["OVERVIEW_TICKET_TIMESTAMP"] = "%s minutes ago",

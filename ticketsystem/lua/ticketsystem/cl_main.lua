@@ -46,6 +46,54 @@ local dropdownOptions = {
             TicketSystem.SelectMenu:RefreshOverview()
         end
     },
+    {
+        shouldShow = function(ticket)
+            return TicketSystem:IsClaimed(ticket)
+        end,
+        name = TicketSystem:GetText("OPTIONS_GOTO"),
+        icon = "icon16/zoom_in.png",
+        func = function(ticketKey, ply)
+            if ULib then
+                RunConsoleCommand("ulx", "goto", ply:Name())
+            elseif serverguard then
+                serverguard.command.Run("goto", "false", ply:Name())
+            elseif sam then
+                RunConsoleCommand("sam", "goto", ply:SteamID64())
+            end
+        end
+    },
+    {
+        shouldShow = function(ticket)
+            return TicketSystem:IsClaimed(ticket)
+        end,
+        name = TicketSystem:GetText("OPTIONS_BRING"),
+        icon = "icon16/zoom_out.png",
+        func = function(ticketKey, ply)
+            if ULib then
+                RunConsoleCommand("ulx", "bring", ply:Name())
+            elseif serverguard then
+                serverguard.command.Run("bring", "false", ply:Name())
+            elseif sam then
+                RunConsoleCommand("sam", "bring", ply:SteamID64())
+            end
+        end
+    },
+    {
+        shouldShow = function(ticket)
+            return TicketSystem:IsClaimed(ticket)
+        end,
+        name = TicketSystem:GetText("OPTIONS_RETURN"),
+        icon = "icon16/user_go.png",
+        func = function(ticketKey, ply)
+            if ULib then
+                RunConsoleCommand("ulx", "return", ply:Name())
+            elseif serverguard then
+                serverguard.command.Run("return", "false", ply:Name())
+            elseif sam then
+                RunConsoleCommand("sam", "return", ply:SteamID64())
+            end
+        end
+    },
 }
 
 -- Opens the main ticket overview for staff members
@@ -169,6 +217,8 @@ function TicketSystem.SelectMenu:OpenMenu()
                         DLabel:SetContentAlignment(5)
                     end
 
+                    local transistionTime = 0
+
                     for key, ticket in SortedPairsByMemberValue(ticketList, "status") do
 
                         local sender = player.GetBySteamID64(ticket.sender_id)
@@ -191,11 +241,13 @@ function TicketSystem.SelectMenu:OpenMenu()
                             adminNick = admin:GetName()
                         end
     
+                        
                         local ticketPanel = vgui.Create("DButton", self.bgPanel)
                         ticketPanel:Dock(TOP)
                         ticketPanel:SetText("")
                         ticketPanel:DockMargin(0, 0, 0, ScrH() * .01)
                         ticketPanel:SetSize(ScrW() * .3, ScrH() * .07)
+                        ticketPanel:SetAlpha(0)
                         ticketPanel.state = "collapsed"
 
                         local wStatic = width * .76
@@ -228,6 +280,8 @@ function TicketSystem.SelectMenu:OpenMenu()
 
                             draw.RoundedBox(5, 0, hStatic * 1.01, w, hStatic * .03, Color(104,104,104, 10))
                         end
+                        ticketPanel:AlphaTo(255, 0.2 + transistionTime)
+                        transistionTime = transistionTime + 0.3
 
                         self.Text = vgui.Create("DLabel", ticketPanel)
                         self.Text:SetPos( ScrW() * .005, ScrH() * .08 )
@@ -266,7 +320,7 @@ function TicketSystem.SelectMenu:OpenMenu()
                             for k, option in pairs(dropdownOptions) do
                                 if option.shouldShow(ticket) then
                                     local optionPanel = contextMenu:AddOption(option.name, function()
-                                        option.func(key)
+                                        option.func(key, sender)
                                     end)
         
                                     optionPanel:SetColor(color_white)
